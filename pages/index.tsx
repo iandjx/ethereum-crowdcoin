@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React, { FC } from "react";
 import { Button, Card } from "semantic-ui-react";
+import MetaMaskCard from "../components/connectors/MetaMaskCard";
+import NetworkCard from "../components/connectors/NetworkCard";
 import Layout from "../components/Layout";
 import factory from "../ethereum/factory";
 
@@ -38,6 +40,8 @@ const CampaignIndex: FC<CampaignIndexProps> = (props) => {
           />
         </a>
       </Link>
+      <NetworkCard />
+      <MetaMaskCard />
       {renderCampaigns()}
     </Layout>
   );
